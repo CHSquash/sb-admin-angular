@@ -85,13 +85,14 @@ angular
               files:[
               'scripts/controllers/main.js',
               'scripts/directives/timeline/timeline.js',
+              'scripts/directives/company/companies.js',
               'scripts/directives/notifications/notifications.js',
               'scripts/directives/chat/chat.js',
               'scripts/directives/dashboard/stats/stats.js'
               ]
             })
           }
-        }
+        } 
       })
       .state('dashboard.form',{
         templateUrl:'views/form.html',

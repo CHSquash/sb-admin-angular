@@ -7,5 +7,9 @@
  * Controller of the sbAdminApp
  */
 angular.module('sbAdminApp')
-  .controller('MainCtrl', function($scope,$position) {
+  .controller('MainCtrl', function($scope,$position,$http) {
+    $http.get('http://localhost:3000/api/companies/').then(function(response){
+      $scope.listOfCompany = response.data;
+    })
   });
+  

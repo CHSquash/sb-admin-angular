@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/start-angular/sb-admin-angular"
+    "url": ""
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
+    "bower": "^1.7.9",
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
     "grunt-concurrent": "^0.5.0",
