@@ -7,7 +7,7 @@ build-dist:
 	docker build -f Dockerfile.dist -t angular_build .
 
 start:
-	docker run -d -p 80:80 --link node angular_client
+	docker run -d -p 80:80 angular_client
 
 start-dist:
 	docker run -d -v $(current_dir)/app:/app/bower_components angular_build
