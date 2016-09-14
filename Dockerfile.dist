@@ -1,0 +1,29 @@
+FROM mhart/alpine-node
+
+RUN npm install -g bower
+
+RUN apk update && apk add git
+
+RUN mkdir /app
+ADD bower.json /app/bower.json
+
+WORKDIR /app
+# COPY /app/index.html /app/index.html
+# COPY /app/scripts/app.js /app/app.js
+
+# RUN cat index.html | grep -o "bower_components[^,]*.js" > js1.txt
+# RUN cat index.html | grep -o "bower_components[^,]*.css" > css1.txt
+# RUN cat app.js | grep -o "bower_components[^,]*.js" > js2.txt
+# RUN cat app.js | grep -o "bower_components[^,]*.css" > css2.txt
+
+# RUN mkdir -p /app/dist/js \
+#   && mkdir -p /app/dist/css
+#
+# RUN for file in `cat js1.txt`; do mv "$file" /app/dist/js ; done
+# RUN for file in `cat js2.txt`; do mv "$file" /app/dist/js ; done
+# RUN for file in `cat css1.txt`; do mv "$file" /app/dist/css ; done
+# RUN for file in `cat css2.txt`; do mv "$file" /app/dist/css ; done
+
+VOLUME /app/bower_components
+
+CMD bower install --allow-root
