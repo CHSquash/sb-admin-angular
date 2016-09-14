@@ -13,5 +13,5 @@ start-dist:
 	docker run -d -v $(current_dir)/app:/app/bower_components angular_build
 
 clean:
-	docker rm $$(docker ps -q -f status=exited)
-	docker rmi -f $$(docker images -qa)
+	docker rm $$(docker ps -q -f status=exited) || echo 'true'
+	docker rmi -f $$(docker images -qa) || echo 'true'

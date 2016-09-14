@@ -8,8 +8,7 @@
  */
 angular.module('sbAdminApp')
   .controller('MainCtrl', function($scope,$position,$http) {
-    $http.get('http://localhost:3000/api/companies/').then(function(response){
+    $http.get('node/api/companies/').then(function(response){
       $scope.listOfCompany = response.data;
     })
   });
-  
