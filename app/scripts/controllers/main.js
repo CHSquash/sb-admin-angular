@@ -8,7 +8,7 @@
  */
 angular.module('sbAdminApp')
   .controller('MainCtrl', function($scope,$position,$http) {
-    $http.get('node/api/companies/').then(function(response){
+    $http.get('http://ec2-54-210-8-236.compute-1.amazonaws.com:3000/api/companies/').then(function(response){
       $scope.listOfCompany = response.data;
     })
   });
