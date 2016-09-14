@@ -139,6 +139,8 @@ ErrorDocument 404 /404.html
     AddType application/javascript                      js jsonp
     AddType application/json                            json
 
+    
+
   # Video
     AddType video/mp4                                   mp4 m4v f4v f4p
     AddType video/ogg                                   ogv
