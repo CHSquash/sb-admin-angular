@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: my-nginx-angular
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: my-nginx-angular
+    spec:
+      containers:
+      - name: my-nginx-angular
+        image: b.gcr.io/rugged-cooler-143304.appspot.com/nginx-angular
+        ports:
+        - containerPort: 80
+          hostPort: 80
