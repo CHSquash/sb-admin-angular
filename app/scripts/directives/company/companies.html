@@ -1,15 +1,14 @@
-
-    <li>
-        <div class="timeline-badge"><i class="fa fa-check"></i>
+ <li ng-class="{ 'timeline-inverted': $odd }">
+    <div class="timeline-badge"><i class="fa fa-check"></i>
+    </div>
+    <div class="timeline-panel">
+        <div class="timeline-heading">
+            <h4 class="timeline-title"> {{data.name}},  {{data.city}}, {{data.state}} </h4>
+            <p><small class="text-muted"><i class="fa fa-clock-o"></i> {{data.start_date}} - {{data.end_date}} </small>
+            </p>
         </div>
-        <div class="timeline-panel">
-            <div class="timeline-heading">
-                <h4 class="timeline-title"> {{data.name}},  {{data.city}}, {{data.state}} </h4>
-                <p><small class="text-muted"><i class="fa fa-clock-o"></i> {{data.start_date}} - {{data.end_date}} </small>
-                </p>
-            </div>
-            <div class="timeline-body">
-                <p> {{data.info}} </p>
-            </div>
+        <div class="timeline-body">
+            <p> {{data.info}} </p>
         </div>
-    </li>
+    </div>
+ </li>

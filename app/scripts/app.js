@@ -17,7 +17,7 @@ angular
   .config(['$stateProvider','$urlRouterProvider','$ocLazyLoadProvider',function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
 
     $ocLazyLoadProvider.config({
-      debug:false,
+      debug:false,  
       events:true,
     });
 
@@ -34,42 +34,40 @@ angular
                     name:'sbAdminApp',
                     files:[
                     'scripts/directives/header/header.js',
-                    'scripts/directives/header/header-notification/header-notification.js',
-                    'scripts/directives/sidebar/sidebar.js',
-                    'scripts/directives/sidebar/sidebar-search/sidebar-search.js'
+                    'scripts/directives/sidebar/sidebar.js'
                     ]
                 }),
                 $ocLazyLoad.load(
                 {
                    name:'toggle-switch',
-                   files:["angular-toggle-switch/angular-toggle-switch.min.js",
-                          "angular-toggle-switch/angular-toggle-switch.css"
+                   files:["dist/angular-toggle-switch/angular-toggle-switch.min.js",
+                          "dist/angular-toggle-switch/angular-toggle-switch.css"
                       ]
                 }),
                 $ocLazyLoad.load(
                 {
                   name:'ngAnimate',
-                  files:['angular-animate/angular-animate.js']
-                })
+                  files:['dist/angular-animate/angular-animate.js']
+                }),
                 $ocLazyLoad.load(
                 {
                   name:'ngCookies',
-                  files:['angular-cookies/angular-cookies.js']
-                })
+                  files:['dist/angular-cookies/angular-cookies.js']
+                }),
                 $ocLazyLoad.load(
                 {
                   name:'ngResource',
-                  files:['angular-resource/angular-resource.js']
-                })
+                  files:['dist/angular-resource/angular-resource.js']
+                }),
                 $ocLazyLoad.load(
                 {
                   name:'ngSanitize',
-                  files:['angular-sanitize/angular-sanitize.js']
-                })
+                  files:['dist/angular-sanitize/angular-sanitize.js']
+                }),
                 $ocLazyLoad.load(
                 {
                   name:'ngTouch',
-                  files:['angular-touch/angular-touch.js']
+                  files:['dist/angular-touch/angular-touch.js']
                 })
             }
         }
@@ -86,7 +84,6 @@ angular
               'scripts/controllers/main.js',
               'scripts/directives/timeline/timeline.js',
               'scripts/directives/company/companies.js',
-              'scripts/directives/notifications/notifications.js',
               'scripts/directives/chat/chat.js',
               'scripts/directives/dashboard/stats/stats.js'
               ]
@@ -115,8 +112,8 @@ angular
             return $ocLazyLoad.load({
               name:'chart.js',
               files:[
-                'angular-chart.js/dist/angular-chart.min.js',
-                'angular-chart.js/dist/angular-chart.css'
+                'dist/angular-chart.js/dist/angular-chart.min.js',
+                'dist/angular-chart.js/dist/angular-chart.css'
               ]
             }),
             $ocLazyLoad.load({
@@ -126,32 +123,4 @@ angular
           }
         }
     })
-      .state('dashboard.table',{
-        templateUrl:'views/table.html',
-        url:'/table'
-    })
-      .state('dashboard.panels-wells',{
-          templateUrl:'views/ui-elements/panels-wells.html',
-          url:'/panels-wells'
-      })
-      .state('dashboard.buttons',{
-        templateUrl:'views/ui-elements/buttons.html',
-        url:'/buttons'
-    })
-      .state('dashboard.notifications',{
-        templateUrl:'views/ui-elements/notifications.html',
-        url:'/notifications'
-    })
-      .state('dashboard.typography',{
-       templateUrl:'views/ui-elements/typography.html',
-       url:'/typography'
-   })
-      .state('dashboard.icons',{
-       templateUrl:'views/ui-elements/icons.html',
-       url:'/icons'
-   })
-      .state('dashboard.grid',{
-       templateUrl:'views/ui-elements/grid.html',
-       url:'/grid'
-   })
   }]);

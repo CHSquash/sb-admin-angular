@@ -352,3 +352,75 @@ table.dataTable thead .sorting:after {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+.panel-github {
+    border-color: #000000;
+}
+
+.panel-github .panel-heading {
+    border-color: #000000;
+    color: #fff;
+    background-color: #000000;
+}
+
+.panel-github a {
+    color: #fff;
+}
+
+.panel-github a:hover {
+    color: #fff;
+}
+
+.panel-coffee {
+    border-color: #00592D;
+}
+
+.panel-coffee .panel-heading {
+    border-color: #00592D;
+    color: #fff;
+    background-color: #00592D;
+}
+
+.panel-coffee a {
+    color: #fff;
+}
+
+.panel-coffee a:hover {
+    color: #fff;
+}
+
+.panel-envelope {
+    border-color: #dd4b39;
+}
+
+.panel-envelope .panel-heading {
+    border-color: #dd4b39;
+    color: #fff;
+    background-color: #dd4b39;
+}
+
+.panel-envelope a {
+    color: #fff;
+}
+
+.panel-envelope a:hover {
+    color: #fff;
+}
+
+.panel-linkedin {
+    border-color: #007bb5;
+}
+
+.panel-linkedin .panel-heading {
+    border-color: #007bb5;
+    color: #fff;
+    background-color: #007bb5;
+}
+
+.panel-linkedin a {
+    color: #fff;
+}
+
+.panel-linkedin a:hover {
+    color: #fff;
+}
